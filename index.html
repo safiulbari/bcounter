@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,65 +10,78 @@
             color: rgb(224, 97, 12);
             font-weight: 800;
             margin-top: 20px;
-            font-size: 72px;
+            font-size: 200px;
         }
-        .button{
+
+        .button {
             border: none;
             padding: 10px 16px;
             color: white;
             background-color: rgb(42, 141, 55);
             border-radius: 6px;
         }
-        .button:active{
+
+        .button:active {
             padding: 11px 17px;
         }
 
-        #reload{
+        #reload {
             background-color: #2494d4;
         }
-        #reload:active{
+
+        #reload:active {
             background-color: #1c73a5;
         }
 
         #addButton {
             background-color: rgb(42, 141, 55);
         }
+
         #addButton:active {
             background-color: rgb(31, 104, 41);
         }
+
         #subButton {
             background-color: rgb(209, 59, 59);
         }
+
         #subButton:active {
             background-color: rgb(145, 41, 41);
         }
+        .page {
+            padding-left:30%;
+
+        }
     </style>
 </head>
+
 <body>
-    <h1>Your Daily Task</h1>
-    
-    <div id="aria">
-        0
+    <div class="page">
+        <h1>Your Daily Task</h1>
+        <div id="aria">
+            0
+        </div>
+        <button id="addButton" class="button">Increase</button>
+        <button id="subButton" class="button">Decrease</button>
+        <button id="reload" class="button">Refresh</button>
     </div>
-    <button id="addButton" class="button">Increase</button>
-    <button id="subButton" class="button">Decrease</button>
-    <button id="reload" class="button">Refresh</button>
     <script>
         let number = 0;
         const aria = document.getElementById("aria");
-        const add = document.getElementById("addButton").addEventListener("click",function(){
+        const add = document.getElementById("addButton").addEventListener("click", function () {
 
             aria.innerHTML = ++number;
         })
-        const sub = document.getElementById("subButton").addEventListener("click",function(){
-            
+        const sub = document.getElementById("subButton").addEventListener("click", function () {
+
             aria.innerHTML = --number;
         })
 
-        const reload = document.getElementById("reload").addEventListener("click",function(){
+        const reload = document.getElementById("reload").addEventListener("click", function () {
             aria.innerHTML = 0;
             number = 0;
         })
     </script>
 </body>
+
 </html>
